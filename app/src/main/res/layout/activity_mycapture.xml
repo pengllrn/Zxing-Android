@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+
+    <!-- 扫描取景框 -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/dbv_custom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:zxing_scanner_layout="@layout/custom_barcode_scanner">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="#50000000">
+            <!--设置透明度-->
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/backIv"
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                app:srcCompat="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="扫一扫"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/select_photo"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="9dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_photo"/>
+
+        </RelativeLayout>
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+</LinearLayout>
