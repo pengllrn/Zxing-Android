@@ -6,8 +6,6 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-
-
     <!-- 扫描取景框 -->
     <com.journeyapps.barcodescanner.DecoratedBarcodeView
         android:id="@+id/dbv_custom"

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.pengl.zxing_android.activity.MyCaptureActivity;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 new IntentIntegrator(MainActivity.this)
-                        .setCaptureActivity(MyCaptureActivity.class)     //设置自定义的CaptureActivity，在这里自定义扫描布局
+                        //.setCaptureActivity(MyCaptureActivity.class)     //设置自定义的CaptureActivity，在这里自定义扫描布局
                         .setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES)// 扫码的类型,可选：一维码，二维码，一/二维码
                         .setPrompt("请将二维码放入取景框\n")// 设置提示语
                         .setCameraId(0)// 选择摄像头,可使用前置或者后置
